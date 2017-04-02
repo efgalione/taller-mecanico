@@ -76,6 +76,7 @@ GEM
     mime-types-data (3.2016.0521)
     mini_portile2 (2.1.0)
     minitest (5.10.1)
+    mixitup_rails (0.0.3)
     multi_json (1.12.1)
     nokogiri (1.7.1)
       mini_portile2 (~> 2.1.0)
@@ -124,6 +125,8 @@ GEM
     sdoc (0.4.2)
       json (~> 1.7, >= 1.7.7)
       rdoc (~> 4.0)
+    slick_rails (1.5.9)
+      railties (>= 3.1)
     spring (2.0.1)
       activesupport (>= 4.2)
     sprockets (3.7.1)
@@ -161,11 +164,13 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   jquery-rails
   jquery-ui-rails
+  mixitup_rails
   pg (= 0.18.1)
   rails (= 4.2.3)
   rails_12factor
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
+  slick_rails
   spring
   sqlite3
   turbolinks
