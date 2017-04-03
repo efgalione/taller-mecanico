@@ -330,18 +330,21 @@ margin-top: 5px;
 	font-size: 24px;
 }
 
+#map {
+    margin: 20px;
+}
 /* Contact Form */
 .text-field-box {
     background: #fff;
     border: 1px solid #ddd;
     border-radius: 40px;
-    height: 60px;
+    height: 40px;
     line-height: 60px;
     text-align: left;
     color: #666;
     font-size: 14px;
     padding: 0 35px;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
     width: 100%;
     outline: none;
     appearance: none;

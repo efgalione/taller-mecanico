@@ -244,36 +244,46 @@
       <div class="row">
         <div class="page-title text-center">
           <h1>Contacto</h1>
-          <p><i class="fa fa-phone"></i> 268XXXXX -
-          <i class="fa fa-mobile"></i> 099XXXXXX -
-          <i class="fa fa-address-book"></i> Calle esq. Manzana Solar</p>
           <hr class="pg-titl-bdr-btm"></hr>
         </div>
-                <div id="sendmessage">Su mensaje a sido enviado. Gracias!</div>
-                <div id="errormessage"></div>
+        <div>
+          <div class="col-md-6">
+            <div class="col-md-12 text-center">
+              <p><i class="fa fa-phone"></i> 268XXXXX |
+              <i class="fa fa-mobile"></i> 099XXXXXX |
+              <i class="fa fa-address-book"></i> Calle esq. Manzana Solar</p>
+            </div>
+            <div class="col-md-12 text-center">
+               <div id="map" style='width: 400px; height: 400px;'></div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div id="sendmessage">Su mensaje a sido enviado. Gracias!</div>
+            <div id="errormessage"></div>
+            <div class="form-sec">
+              <form action="" method="post" role="form" class="contactForm">
+                  <div class="col-md-12 form-group">
+                        <input type="text" name="name" class="form-control text-field-box" id="name" placeholder="Tu Nombre" data-rule="minlen:4" data-msg="Por favor ingrese al menos 4 caracteres." />
+                        <div class="validation"></div>
+                    </div>
+                    <div class="col-md-12 form-group">
+                        <input type="email" class="form-control text-field-box" name="email" id="email" placeholder="Tu Email" data-rule="email" data-msg="Por favor ingrese un email valido." />
+                        <div class="validation"></div>
+                    </div>
+                    <div class="col-md-12 form-group">
+                        <input type="text" class="form-control text-field-box" name="subject" id="subject" placeholder="Asunto" data-rule="minlen:4" data-msg="Por faor ingrese al menos 4 caracteres." />
+                        <div class="validation"></div>
+                    </div>
+                    <div class="col-md-12 form-group">
+                        <textarea class="form-control text-field-box" name="message" rows="5" data-rule="required" data-msg="Por favor escriba su mensaje aqui." placeholder="Mensaje"></textarea>
+                        <div class="validation"></div>
 
-        <div class="form-sec">
-                  <form action="" method="post" role="form" class="contactForm">
-                      <div class="col-md-4 form-group">
-                            <input type="text" name="name" class="form-control text-field-box" id="name" placeholder="Tu Nombre" data-rule="minlen:4" data-msg="Por favor ingrese al menos 4 caracteres." />
-                            <div class="validation"></div>
-                        </div>
-                        <div class="col-md-4 form-group">
-                            <input type="email" class="form-control text-field-box" name="email" id="email" placeholder="Tu Email" data-rule="email" data-msg="Por favor ingrese un email valido." />
-                            <div class="validation"></div>
-                        </div>
-                        <div class="col-md-4 form-group">
-                            <input type="text" class="form-control text-field-box" name="subject" id="subject" placeholder="Asunto" data-rule="minlen:4" data-msg="Por faor ingrese al menos 4 caracteres." />
-                            <div class="validation"></div>
-                        </div>
-                        <div class="col-md-12 form-group">
-                            <textarea class="form-control text-field-box" name="message" rows="5" data-rule="required" data-msg="Por favor escriba su mensaje aqui." placeholder="Mensaje"></textarea>
-                            <div class="validation"></div>
-
-                            <button class="button-medium" id="contact-submit" type="submit" name="contact">Enviar</button>
-                        </div>
-                    </form>
-                </div>
+                        <button class="button-medium" id="contact-submit" type="submit" name="contact">Enviar</button>
+                    </div>
+                </form>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -325,3 +335,16 @@
   <script type="text/javascript" src="js/custom.js"></script>
     <script src="contactform/contactform.js"></script>
      -->
+     <script type="text/javascript">
+      handler = Gmaps.build('Google');
+      handler.buildMap({ provider: { maxZoom: 16}, internal: {id: 'map'}}, function(){
+        markers = handler.addMarkers([
+          {
+            lat: -34.82930922,
+            lng: -55.96452579
+          }
+        ]);
+        handler.bounds.extendWith(markers);
+        handler.fitMapToBounds();
+      });
+    </script>

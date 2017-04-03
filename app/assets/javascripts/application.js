@@ -16,5 +16,7 @@
 //= require jquery-ui
 //= require mixitup
 //= require slick
+//= require underscore
+//= require gmaps/google
+//= require underscore
 //= require_tree .
-
