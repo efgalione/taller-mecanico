@@ -248,7 +248,7 @@
         </div>
         <div>
           <div class="col-md-6">
-            <div class="col-md-12 text-center">
+            <div class="col-md-12">
               <p><i class="fa fa-phone"></i> 268XXXXX |
               <i class="fa fa-mobile"></i> 099XXXXXX |
               <i class="fa fa-address-book"></i> Calle esq. Manzana Solar</p>
@@ -335,16 +335,4 @@
   <script type="text/javascript" src="js/custom.js"></script>
     <script src="contactform/contactform.js"></script>
      -->
-     <script type="text/javascript">
-      handler = Gmaps.build('Google');
-      handler.buildMap({ provider: { maxZoom: 16}, internal: {id: 'map'}}, function(){
-        markers = handler.addMarkers([
-          {
-            lat: -34.82930922,
-            lng: -55.96452579
-          }
-        ]);
-        handler.bounds.extendWith(markers);
-        handler.fitMapToBounds();
-      });
-    </script>
+

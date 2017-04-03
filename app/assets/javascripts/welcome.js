@@ -11,4 +11,16 @@ jQuery(function(){
             }
         }
     });
+
+    handler = Gmaps.build('Google');
+      handler.buildMap({ provider: { maxZoom: 16}, internal: {id: 'map'}}, function(){
+        markers = handler.addMarkers([
+          {
+            lat: -34.82930922,
+            lng: -55.96452579
+          }
+        ]);
+        handler.bounds.extendWith(markers);
+        handler.fitMapToBounds();
+      });
 });
